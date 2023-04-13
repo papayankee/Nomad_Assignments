@@ -1,0 +1,31 @@
+.top-yellow-bar {
+    background-color: yellow;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 3px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  
+  .top-yellow-bar__column {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .top-yellow-bar__column i,
+  .top-yellow-bar__column span {
+    font-size: 32px;
+  }
+  
+  .top-yellow-bar__column:first-child {
+    margin-left: 5px;
+  }
+  
+  .top-yellow-bar__column .fa-shopping-basket {
+    margin: 0px 5px;
+  }
+  
