@@ -1,31 +1,161 @@
+
+body {
+    max-width: 360px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
 .top-yellow-bar {
     background-color: yellow;
-    width: 100%;
-    height: 200px;
     display: flex;
     justify-content: center;
-    padding: 5px 3px;
-    box-sizing: border-box;
     align-items: center;
+    padding: 40px 15px;
+    padding-bottom: 50px;
   }
   
   .top-yellow-bar__column {
     width: 33%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+
   }
   
+
+
   .top-yellow-bar__column i,
   .top-yellow-bar__column span {
-    font-size: 32px;
+    font-size: 20px;
   }
   
   .top-yellow-bar__column:first-child {
     margin-left: 5px;
   }
   
-  .top-yellow-bar__column .fa-shopping-basket {
-    margin: 0px 5px;
+    .top-yellow-bar__column:nth-child(2) {
+    text-align: center;
   }
-  
+
+  .top-yellow-bar__column:last-child {
+    text-align: right;
+    margin-right: 5px;
+  }
+
+
+  .search-box {
+    width: 80%;
+    position: relative;
+    top:-30px;
+    left: -25px;
+    margin: 0 auto;
+  }
+
+
+  /* 여기 왜 앞에 . 이나 # 이런거 안붙이는거야? */
+    input {
+    width: 100%;
+    border: none;
+    padding: 15px 25px;
+    font-size: 15px;
+    border-radius: 50px;
+    box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  input::placeholder {
+    opacity: 0.7;
+  }
+
+.search-box i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 20px; /* add this line to adjust the icon size */
+}
+
+main {
+    padding: 0 15px;
+}
+
+main h2 {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.book-cover {
+    display: flex;
+}
+
+.book-cover img {
+    width: 140px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.book-cover__data {
+    width: 100%;
+}
+
+.book-cover__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.book-cover__author {
+  font-size:12px;
+  opacity: 0.3;
+  display: block;
+  margin-bottom:10px;
+}
+
+.book-cover__rating {
+  color:#FDCC32;
+  font-size:12px;
+  margin-bottom:20px;
+}
+
+.book-cover__rating i:last-child {
+  color:#F7F7F7;
+}
+
+
+.book-cover__tags {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:30px;
+}
+
+.book-cover__tag {
+  background: #F7F7F7;
+  font-size: 12px;
+  font-weight: 500;
+  padding:10px 20px;
+  display: block;
+  border-radius: 5px;
+}
+
+.book-cover__icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-cover__bookmark {
+  background-color: #FDCC32;
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.book-cover__book-now {
+  background:black;
+  color:white;
+  font-size: 12px;
+  font-weight: 500;
+  padding:10px 40px;
+  display: block;
+  border-radius: 5px;
+}
