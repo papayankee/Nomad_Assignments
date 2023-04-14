@@ -87,6 +87,7 @@ body {
     font-weight: 600;
     border-radius: 20px;
     height: 40px;
+    box-shadow: 0px 5px 5px rgba(32, 5, 58, 0.3);
 }
 
 .column__btns__white {
@@ -99,4 +100,163 @@ body {
     font-weight: 600;
     border-radius: 20px;
     height: 40px;
+    box-shadow: 0px 5px 5px rgba(32, 5, 58, 0.3);
 }
+
+.song-component {
+    width: 80%;
+}
+
+.song-component__column {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.song-component__column i {
+    color: #999;
+}
+
+.song-component__column__photo-sm {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    box-shadow: 0px 5px 5px rgba(193, 204, 33, 0.507);
+}
+
+.song-component__column__info {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.song-component__column__info :first-child {
+    font-size: 14px;
+    color: #999;
+    font-weight: 600;
+}
+
+.song-component__column__info__name{
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 800;
+}
+
+.music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width: 90%;
+    font-weight: 600;
+    border-radius: 30px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+.music-player__title-author {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.music-player__title-author__author {
+    font-size: 14px;
+    color: #999;
+}
+
+/* 여기부터 두번째 페이지 */
+.playing-music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.playing-music__album-cover {
+    display:flex;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px rgba(32, 5, 58, 0.507);
+    margin-top: 40px;
+}
+
+.playing-music__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.playing-music__info__title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.playing-music__info__author {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+}
+
+.playing-music__time {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 40px;
+}
+
+
+.playing-music__progress-bar {
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.playing-music__progress-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 150px;
+    top: -5px;
+}
+  
+  .playing-music__progress {
+    height: 50%;
+    background-color: #333;
+    border-radius: 5px;
+    width: 60%; /* set width to change progress */
+  }
+
+  .playing-music__contol-pannel {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: 40px;
+    align-items: center;
+    font-size: 25px;
+  }
+
+  .playing-music__contol-pannel i:nth-child(3) {
+    font-size: 50px;
+  }
