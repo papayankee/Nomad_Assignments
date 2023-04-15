@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     margin: 50px 30px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .screen-header {
@@ -180,6 +181,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    position: relative;
 }
 
 .playing-music__album-cover {
@@ -219,13 +221,18 @@ body {
     margin-top: 40px;
 }
 
-
 .playing-music__progress-bar {
-    width: 80%;
-    height: 10px;
-    border-radius: 5px;
     margin-top: 10px;
     position: relative;
+    width: 80%;
+}
+
+.playing-music__progress-played {
+    height:4px;
+    border-radius: 5px;
+    background-color:#333;
+    width: 60%;
+    position: absolute;
 }
 
 .playing-music__progress-dot {
@@ -234,18 +241,14 @@ body {
     border-radius: 50%;
     background-color: #333;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 150px;
     top: -5px;
+    left: 60%;
 }
   
-  .playing-music__progress {
-    height: 50%;
-    background-color: #333;
+  .playing-music__progress__total {
+    background-color:#999;
+    height: 4px;
     border-radius: 5px;
-    width: 60%; /* set width to change progress */
   }
 
   .playing-music__contol-pannel {
