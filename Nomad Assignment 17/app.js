@@ -12,12 +12,12 @@
     const numGuess = numGuessedInput.value;
     localStorage.setItem("Generated Number", numGen);
     localStorage.setItem("Guessed Number", numGuess);
-    const ranNum = Math.ceil(Math.random() * (parseInt(numGen)));
+    const ranNum = Math.ceil(Math.random() * numGen);
     savedRandomNumber(ranNum, numGuess);
   }
 
   function savedRandomNumber(ranNum, numGuess) {
-    if (ranNum === numGuess) {
+    if (parseInt(numGuess) === parseInt(ranNum)) {
       outcomeResult.innerText = "You Won!";
     } else {
       outcomeResult.innerText = "You Lost!";
