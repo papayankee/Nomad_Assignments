@@ -1,3 +1,16 @@
 .hidden {
     display: none;
 }
+
+#numGenerator {
+    display: flex;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+#guessNum {
+    display: flex;
+}
