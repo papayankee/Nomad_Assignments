@@ -7,24 +7,26 @@ const HIDDEN_CLASSNAME = "hidden";
 
 // 생성된 숫자 및 유저가 입력한 숫자를 저장할 변수
 function onNumGenGuessSubmit(event) {
-    event.preventDefault();
-    const numGen = numGenInput.value;
-    const numGuess = numGuessedInput.value;
-    localStorage.setItem("Generated Number", numGen);
-    localStorage.setItem("Guessed Number", numGuess);
-    const ranNum = Math.ceil(Math.random() * (parseInt(numGen)));
-    const savedRandomNumber = function(ranNum, numGuess) {
-      if (ranNum === numGuess) {
-        outcomeResult.innerText = "You Won!";
-      } else {
-        outcomeResult.innerText = "You Lost!";
-      }
-      outcomeHeader.innerText = `You chose: ${numGuess}, the machine chose: ${ranNum}.`;
-      outcomeDiv.classList.remove(HIDDEN_CLASSNAME);
-    }
-    savedRandomNumber(ranNum, numGuess);
-  }
+  event.preventDefault();
+  const numGen = numGenInput.value;
+  const numGuess = numGuessedInput.value;
+  localStorage.setItem("Generated Number", numGen);
+  localStorage.setItem("Guessed Number", numGuess);
+  const ranNum = Math.ceil(Math.random() * numGen);
+  localStorage.setItem("Random Number", ranNum);
+  compareNumbers(numGuess);
+}
 
+function compareNumbers(numGuess) {
+  const ranNum = parseInt(localStorage.getItem("Random Number"));
+  if (parseInt(numGuess) === parseInt(ranNum)) {
+    outcomeResult.innerText = "You Won!";
+  } else {
+    outcomeResult.innerText = "You Lost!";
+  }
+  outcomeHeader.innerText = `You chose: ${numGuess}, the machine chose: ${ranNum}.`;
+  outcomeDiv.classList.remove(HIDDEN_CLASSNAME);
+}
 
 const guessForm = document.querySelector("#guessNum");
 guessForm.addEventListener("submit", onNumGenGuessSubmit);
